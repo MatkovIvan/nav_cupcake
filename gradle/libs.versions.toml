@@ -13,10 +13,12 @@ compose-multiplatform = "1.6.10-dev1520"
 compose-lifecicle-dev = "1.6.10-lifecycle-dev0319"
 junit = "4.13.2"
 kotlin = "1.9.22"
+kotlinx-datetime = "0.6.0-RC.2"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 androidx-core-bundle = { module = "androidx.core:core-bundle", version.ref = "androidx-core" }

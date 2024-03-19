@@ -85,7 +85,10 @@ fun CupcakeAppBar(
 
 @Composable
 fun CupcakeApp(
-    viewModel: OrderViewModel = viewModel(),
+    viewModel: OrderViewModel = viewModel(
+        OrderViewModel::class,
+        factory = VIEW_MODEL_FACTORY
+    ),
     navController: NavHostController = rememberNavController()
 ) {
     // Get current back stack entry

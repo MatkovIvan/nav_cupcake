@@ -21,10 +21,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
-import java.text.NumberFormat
-import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.Locale
+import kotlinx.datetime.*
+import kotlinx.datetime.format.FormatStringsInDatetimeFormats
+import kotlinx.datetime.format.byUnicodePattern
 
 /** Price for a single cupcake */
 private const val PRICE_PER_CUPCAKE = 2.00
@@ -97,8 +96,7 @@ class OrderViewModel : ViewModel() {
         if (pickupOptions()[0] == pickupDate) {
             calculatedPrice += PRICE_FOR_SAME_DAY_PICKUP
         }
-        val formattedPrice = NumberFormat.getCurrencyInstance().format(calculatedPrice)
-        return formattedPrice
+        return "$calculatedPrice€"
     }
 
     /**
@@ -106,12 +104,12 @@ class OrderViewModel : ViewModel() {
      */
     private fun pickupOptions(): List<String> {
         val dateOptions = mutableListOf<String>()
-        val formatter = SimpleDateFormat("E MMM d", Locale.getDefault())
-        val calendar = Calendar.getInstance()
+        val now = Clock.System.now()
+        val timeZone = TimeZone.currentSystemDefault()
         // add current date and the following 3 dates.
         repeat(4) {
-            dateOptions.add(formatter.format(calendar.time))
-            calendar.add(Calendar.DATE, 1)
+            val day = now.plus(it, DateTimeUnit.DAY, timeZone)
+            dateOptions.add(day.toLocalDateTime(timeZone).date.toString())
         }
         return dateOptions
     }

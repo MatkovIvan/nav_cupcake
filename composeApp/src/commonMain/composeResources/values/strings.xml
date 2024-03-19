@@ -19,10 +19,10 @@
     <string name="quantity">Quantity</string>
     <string name="flavor">Flavor</string>
     <string name="pickup_date">Pickup date</string>
-    <string name="subtotal_price">Subtotal %s</string>
-    <string name="total_price">Total %s</string>
+    <string name="subtotal_price">Subtotal %1$s</string>
+    <string name="total_price">Total %1$s</string>
     <string name="new_cupcake_order">New Cupcake Order</string>
     <string name="order_details">Quantity: %1$s \nFlavor: %2$s \nPickup date: %3$s \nTotal: %4$s \n\nThank you!</string>
     <string name="back_button">Back</string>
-    <string name="cupcakes">%d cupcakes</string>
+    <string name="cupcakes">%1$d cupcakes</string>
 </resources>
