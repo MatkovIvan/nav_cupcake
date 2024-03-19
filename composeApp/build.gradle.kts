@@ -5,7 +5,7 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.composeMultiplatform)
 }
 
 kotlin {
@@ -48,6 +48,13 @@ kotlin {
     }
     
     sourceSets {
+        all {
+            languageSettings {
+                optIn("androidx.compose.material3.ExperimentalMaterial3Api")
+                optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
+            }
+        }
+
         val desktopMain by getting
         
         androidMain.dependencies {
@@ -55,10 +62,23 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
+            implementation(libs.compose.runtime)
+            implementation(libs.compose.foundation)
+            implementation(libs.compose.ui)
+            implementation(libs.compose.material3)
+
+            implementation(libs.androidx.core.bundle)
+            implementation(libs.androidx.lifecycle.common)
+            implementation(libs.androidx.lifecycle.runtime)
+            implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.androidx.lifecycle.viewmodel)
+            implementation(libs.androidx.lifecycle.viewmodel.compose)
+            implementation(libs.androidx.lifecycle.viewmodel.savedstate)
+            implementation(libs.androidx.navigation.common)
+            implementation(libs.androidx.navigation.runtime)
+            implementation(libs.androidx.navigation.compose)
+            implementation(libs.androidx.savedstate)
+
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
         }
