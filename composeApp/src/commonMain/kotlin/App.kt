@@ -1,6 +1,6 @@
 import androidx.compose.runtime.Composable
-import com.example.cupcake.CupcakeApp
-import com.example.cupcake.ui.theme.CupcakeTheme
+import com.matkovivan.nav_cupcake.CupcakeApp
+import com.matkovivan.nav_cupcake.ui.theme.CupcakeTheme
 
 @Composable
 fun App() {

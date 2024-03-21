@@ -13,24 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cupcake.ui.components
+package com.matkovivan.nav_cupcake.data
 
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import cupcake.composeapp.generated.resources.Res
-import cupcake.composeapp.generated.resources.subtotal_price
-import org.jetbrains.compose.resources.stringResource
+import cupcake.composeapp.generated.resources.*
 
-/**
- * Composable that displays formatted [price] that will be formatted and displayed on screen
- */
-@Composable
-fun FormattedPriceLabel(subtotal: String, modifier: Modifier = Modifier) {
-    Text(
-        text = stringResource(Res.string.subtotal_price, subtotal),
-        modifier = modifier,
-        style = MaterialTheme.typography.headlineSmall
+object DataSource {
+    val flavors = listOf(
+        Res.string.vanilla,
+        Res.string.red_velvet,
+        Res.string.chocolate,
+        Res.string.salted_caramel,
+        Res.string.coffee
+    )
+
+    val quantityOptions = listOf(
+        Pair(Res.string.one_cupcake, 1),
+        Pair(Res.string.six_cupcakes, 6),
+        Pair(Res.string.twelve_cupcakes, 12)
     )
 }

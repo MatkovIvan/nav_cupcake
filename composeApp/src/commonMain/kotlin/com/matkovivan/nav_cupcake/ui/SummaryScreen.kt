@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cupcake.ui
+package com.matkovivan.nav_cupcake.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
@@ -25,9 +25,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.cupcake.data.OrderUiState
-import com.example.cupcake.ui.components.FormattedPriceLabel
-import com.example.cupcake.ui.theme.CupcakeTheme
+import com.matkovivan.nav_cupcake.data.OrderUiState
+import com.matkovivan.nav_cupcake.ui.components.FormattedPriceLabel
+import com.matkovivan.nav_cupcake.ui.theme.CupcakeTheme
 import cupcake.composeapp.generated.resources.*
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview

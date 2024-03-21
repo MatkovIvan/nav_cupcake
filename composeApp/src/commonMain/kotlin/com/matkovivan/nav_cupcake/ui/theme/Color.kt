@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cupcake.ui.theme
+package com.matkovivan.nav_cupcake.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

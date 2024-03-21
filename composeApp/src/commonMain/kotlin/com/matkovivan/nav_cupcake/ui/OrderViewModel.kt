@@ -13,17 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cupcake.ui
+package com.matkovivan.nav_cupcake.ui
 
 import androidx.lifecycle.ViewModel
-import com.example.cupcake.data.OrderUiState
+import com.matkovivan.nav_cupcake.data.OrderUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.datetime.*
-import kotlinx.datetime.format.FormatStringsInDatetimeFormats
-import kotlinx.datetime.format.byUnicodePattern
 
 /** Price for a single cupcake */
 private const val PRICE_PER_CUPCAKE = 2.00

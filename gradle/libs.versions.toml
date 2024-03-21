@@ -4,13 +4,9 @@ android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
 androidx-activity = "1.8.2"
-androidx-core = "1.13.0-beta01"
-androidx-lifecycle = "2.8.0-alpha02"
-androidx-navigation = "2.8.0-alpha01"
-androidx-savedstate = "1.3.0-alpha01"
 compose-android = "1.6.2"
 compose-multiplatform = "1.6.10-dev1520"
-compose-lifecicle-dev = "1.6.10-lifecycle-dev0319"
+compose-nav = "0.0.0-nav-dev0321"
 junit = "4.13.2"
 kotlin = "1.9.22"
 kotlinx-datetime = "0.6.0-RC.2"
@@ -21,21 +17,21 @@ kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
-androidx-core-bundle = { module = "androidx.core:core-bundle", version.ref = "androidx-core" }
-androidx-lifecycle-common = { module = "androidx.lifecycle:lifecycle-common", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidx-lifecycle" }
-androidx-navigation-common = { module = "androidx.navigation:navigation-common", version.ref = "androidx-navigation" }
-androidx-navigation-runtime = { module = "androidx.navigation:navigation-runtime", version.ref = "androidx-navigation" }
-androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
-androidx-savedstate = { module = "androidx.savedstate:savedstate", version.ref = "androidx-savedstate" }
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-lifecicle-dev" }
-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-lifecicle-dev" }
-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-lifecicle-dev" }
-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-lifecicle-dev" }
+internal-core-bundle = { module = "org.jetbrains.compose.core-internal:core-bundle", version.ref = "compose-nav" }
+internal-lifecycle-common = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-common", version.ref = "compose-nav" }
+internal-lifecycle-runtime = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-runtime", version.ref = "compose-nav" }
+internal-lifecycle-runtime-compose = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-runtime-compose", version.ref = "compose-nav" }
+internal-lifecycle-viewmodel = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-viewmodel", version.ref = "compose-nav" }
+internal-lifecycle-viewmodel-compose = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-viewmodel-compose", version.ref = "compose-nav" }
+internal-lifecycle-viewmodel-savedstate = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-viewmodel-savedstate", version.ref = "compose-nav" }
+internal-navigation-common = { module = "org.jetbrains.compose.navigation-internal:navigation-common", version.ref = "compose-nav" }
+internal-navigation-runtime = { module = "org.jetbrains.compose.navigation-internal:navigation-runtime", version.ref = "compose-nav" }
+internal-navigation-compose = { module = "org.jetbrains.compose.navigation-internal:navigation-compose", version.ref = "compose-nav" }
+internal-savedstate = { module = "org.jetbrains.compose.savedstate-internal:savedstate", version.ref = "compose-nav" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-nav" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-nav" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-nav" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-nav" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-android" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-android" }
 

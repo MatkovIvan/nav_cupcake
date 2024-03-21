@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cupcake.ui
+package com.matkovivan.nav_cupcake.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -24,8 +24,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.cupcake.data.DataSource
-import com.example.cupcake.ui.theme.CupcakeTheme
+import com.matkovivan.nav_cupcake.data.DataSource
+import com.matkovivan.nav_cupcake.ui.theme.CupcakeTheme
 import cupcake.composeapp.generated.resources.Res
 import cupcake.composeapp.generated.resources.cupcake
 import cupcake.composeapp.generated.resources.order_cupcakes

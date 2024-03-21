@@ -55,8 +55,26 @@ kotlin {
             }
         }
 
-        val desktopMain by getting
-        
+        val commonMain by getting
+        val jbMain by creating {
+            dependsOn(commonMain)
+        }
+        val desktopMain by getting {
+            dependsOn(jbMain)
+        }
+        val iosX64Main by getting
+        val iosArm64Main by getting
+        val iosSimulatorArm64Main by getting
+        val iosMain by creating {
+            dependsOn(jbMain)
+            iosX64Main.dependsOn(this)
+            iosArm64Main.dependsOn(this)
+            iosSimulatorArm64Main.dependsOn(this)
+        }
+        val wasmJsMain by getting {
+            dependsOn(jbMain)
+        }
+
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
@@ -64,29 +82,37 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.kotlinx.datetime)
 
-            implementation(libs.compose.runtime)
-            implementation(libs.compose.foundation)
-            implementation(libs.compose.ui)
-            implementation(libs.compose.material3)
-
-            implementation(libs.androidx.core.bundle)
-            implementation(libs.androidx.lifecycle.common)
-            implementation(libs.androidx.lifecycle.runtime)
-            implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.viewmodel.compose)
-            implementation(libs.androidx.lifecycle.viewmodel.savedstate)
-            implementation(libs.androidx.navigation.common)
-            implementation(libs.androidx.navigation.runtime)
-            implementation(libs.androidx.navigation.compose)
-            implementation(libs.androidx.savedstate)
-
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.ui)
+            implementation(compose.material3)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
+            implementation(libs.internal.lifecycle.common)
+            implementation(libs.internal.lifecycle.runtime)
+            implementation(libs.internal.lifecycle.runtime.compose)
+            implementation(libs.internal.lifecycle.viewmodel)
+            implementation(libs.internal.lifecycle.viewmodel.compose)
+            implementation(libs.internal.lifecycle.viewmodel.savedstate)
+            implementation(libs.internal.navigation.common)
+            implementation(libs.internal.navigation.runtime)
+            implementation(libs.internal.navigation.compose)
+            implementation(libs.internal.savedstate)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
         }
+    }
+}
+
+// Remove once plugin updated
+configurations.all {
+    resolutionStrategy {
+        force(libs.compose.runtime)
+        force(libs.compose.foundation)
+        force(libs.compose.ui)
+        force(libs.compose.material3)
     }
 }
 

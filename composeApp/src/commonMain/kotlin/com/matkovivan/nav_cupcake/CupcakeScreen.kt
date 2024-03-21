@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cupcake
+package com.matkovivan.nav_cupcake
 
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -28,18 +28,17 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.cupcake.data.DataSource
-import com.example.cupcake.data.OrderUiState
-import com.example.cupcake.ui.OrderSummaryScreen
-import com.example.cupcake.ui.OrderViewModel
-import com.example.cupcake.ui.SelectOptionScreen
-import com.example.cupcake.ui.StartOrderScreen
+import com.matkovivan.nav_cupcake.data.DataSource
+import com.matkovivan.nav_cupcake.data.OrderUiState
+import com.matkovivan.nav_cupcake.ui.OrderSummaryScreen
+import com.matkovivan.nav_cupcake.ui.OrderViewModel
+import com.matkovivan.nav_cupcake.ui.SelectOptionScreen
+import com.matkovivan.nav_cupcake.ui.StartOrderScreen
 import cupcake.composeapp.generated.resources.*
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
@@ -85,10 +84,7 @@ fun CupcakeAppBar(
 
 @Composable
 fun CupcakeApp(
-    viewModel: OrderViewModel = viewModel(
-        OrderViewModel::class,
-        factory = VIEW_MODEL_FACTORY
-    ),
+    viewModel: OrderViewModel = viewModel(OrderViewModel::class),
     navController: NavHostController = rememberNavController()
 ) {
     // Get current back stack entry

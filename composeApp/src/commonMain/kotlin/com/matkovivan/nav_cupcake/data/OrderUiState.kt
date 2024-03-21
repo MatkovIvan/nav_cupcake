@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.cupcake.data
+package com.matkovivan.nav_cupcake.data
 
 /**
  * Data class that represents the current UI state in terms of [quantity], [flavor],
