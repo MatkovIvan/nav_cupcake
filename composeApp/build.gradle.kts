@@ -82,23 +82,13 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.kotlinx.datetime)
 
-            implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.ui)
             implementation(compose.material3)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
 
-            implementation(libs.internal.lifecycle.common)
-            implementation(libs.internal.lifecycle.runtime)
-            implementation(libs.internal.lifecycle.runtime.compose)
-            implementation(libs.internal.lifecycle.viewmodel)
             implementation(libs.internal.lifecycle.viewmodel.compose)
-            implementation(libs.internal.lifecycle.viewmodel.savedstate)
-            implementation(libs.internal.navigation.common)
-            implementation(libs.internal.navigation.runtime)
             implementation(libs.internal.navigation.compose)
-            implementation(libs.internal.savedstate)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

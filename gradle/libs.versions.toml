@@ -17,17 +17,8 @@ kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
-internal-core-bundle = { module = "org.jetbrains.compose.core-internal:core-bundle", version.ref = "compose-nav" }
-internal-lifecycle-common = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-common", version.ref = "compose-nav" }
-internal-lifecycle-runtime = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-runtime", version.ref = "compose-nav" }
-internal-lifecycle-runtime-compose = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-runtime-compose", version.ref = "compose-nav" }
-internal-lifecycle-viewmodel = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-viewmodel", version.ref = "compose-nav" }
 internal-lifecycle-viewmodel-compose = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-viewmodel-compose", version.ref = "compose-nav" }
-internal-lifecycle-viewmodel-savedstate = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-viewmodel-savedstate", version.ref = "compose-nav" }
-internal-navigation-common = { module = "org.jetbrains.compose.navigation-internal:navigation-common", version.ref = "compose-nav" }
-internal-navigation-runtime = { module = "org.jetbrains.compose.navigation-internal:navigation-runtime", version.ref = "compose-nav" }
 internal-navigation-compose = { module = "org.jetbrains.compose.navigation-internal:navigation-compose", version.ref = "compose-nav" }
-internal-savedstate = { module = "org.jetbrains.compose.savedstate-internal:savedstate", version.ref = "compose-nav" }
 compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-nav" }
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-nav" }
 compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-nav" }
