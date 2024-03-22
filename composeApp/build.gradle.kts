@@ -96,6 +96,16 @@ kotlin {
     }
 }
 
+configurations.all {
+
+    // TODO: Republish compose with this fix
+    resolutionStrategy.eachDependency {
+        if (requested.group.startsWith("org.jetbrains.skiko")) {
+            useVersion("0.7.99")
+        }
+    }
+}
+
 android {
     namespace = "com.matkovivan.nav_cupcake"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
