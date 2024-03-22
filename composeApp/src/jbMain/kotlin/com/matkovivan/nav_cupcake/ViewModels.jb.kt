@@ -12,6 +12,6 @@ val VIEW_MODEL_FACTORY = viewModelFactory {
 }
 
 @Composable
-internal actual inline fun <VM : ViewModel> viewModel(
+internal actual fun <VM : ViewModel> viewModel(
     modelClass: KClass<VM>
 ): VM = androidx.lifecycle.viewmodel.compose.viewModel(modelClass, factory = VIEW_MODEL_FACTORY)

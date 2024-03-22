@@ -5,8 +5,7 @@ android-minSdk = "24"
 android-targetSdk = "34"
 androidx-activity = "1.8.2"
 compose-android = "1.6.2"
-compose-multiplatform = "1.6.10-dev1520"
-compose-nav = "0.0.0-nav-dev0321"
+compose-multiplatform = "0.0.0-nav-dev1535"
 junit = "4.13.2"
 kotlin = "1.9.22"
 kotlinx-datetime = "0.6.0-RC.2"
@@ -17,12 +16,8 @@ kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
-internal-lifecycle-viewmodel-compose = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-viewmodel-compose", version.ref = "compose-nav" }
-internal-navigation-compose = { module = "org.jetbrains.compose.navigation-internal:navigation-compose", version.ref = "compose-nav" }
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-nav" }
-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-nav" }
-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-nav" }
-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-nav" }
+internal-lifecycle-viewmodel-compose = { module = "org.jetbrains.compose.lifecycle-internal:lifecycle-viewmodel-compose", version.ref = "compose-multiplatform" }
+internal-navigation-compose = { module = "org.jetbrains.compose.navigation-internal:navigation-compose", version.ref = "compose-multiplatform" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-android" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-android" }
 

@@ -96,16 +96,6 @@ kotlin {
     }
 }
 
-// Remove once plugin updated
-configurations.all {
-    resolutionStrategy {
-        force(libs.compose.runtime)
-        force(libs.compose.foundation)
-        force(libs.compose.ui)
-        force(libs.compose.material3)
-    }
-}
-
 android {
     namespace = "com.matkovivan.nav_cupcake"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
