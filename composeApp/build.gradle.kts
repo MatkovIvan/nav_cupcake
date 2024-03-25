@@ -87,21 +87,11 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
 
-            implementation(libs.internal.lifecycle.viewmodel.compose)
-            implementation(libs.internal.navigation.compose)
+            implementation(libs.androidx.lifecycle.viewmodel.compose)
+            implementation(libs.androidx.navigation.compose)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
-        }
-    }
-}
-
-configurations.all {
-
-    // TODO: Republish compose with this fix
-    resolutionStrategy.eachDependency {
-        if (requested.group.startsWith("org.jetbrains.skiko")) {
-            useVersion("0.7.99")
         }
     }
 }
