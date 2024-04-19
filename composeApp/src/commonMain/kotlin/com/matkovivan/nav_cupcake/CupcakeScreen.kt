@@ -28,6 +28,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -84,7 +85,7 @@ fun CupcakeAppBar(
 
 @Composable
 fun CupcakeApp(
-    viewModel: OrderViewModel = viewModel(OrderViewModel::class),
+    viewModel: OrderViewModel = viewModel { OrderViewModel() },
     navController: NavHostController = rememberNavController()
 ) {
     // Get current back stack entry
