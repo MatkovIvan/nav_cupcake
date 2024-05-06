@@ -4,12 +4,12 @@ android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
 androidx-activity = "1.8.2"
-androidx-lifecycle = "2.8.0-beta01"
-androidx-navigation = "2.8.0-alpha02"
-compose-android = "1.6.4"
-compose-multiplatform = "1.6.10-beta02"
+androidx-lifecycle = "2.8.0-rc01"
+androidx-navigation = "2.7.0-alpha04"
+compose-android = "1.6.7"
+compose-multiplatform = "1.6.10-rc01"
 junit = "4.13.2"
-kotlin = "1.9.23"
+kotlin = "2.0.0-RC2"
 kotlinx-datetime = "0.6.0-RC.2"
 
 [libraries]
@@ -26,5 +26,6 @@ compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
-composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
